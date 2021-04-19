@@ -6,13 +6,8 @@ const port = process.env.PORT || 3000
 let hits = 0
 
 app.get('/', (req, res) => {
-    res.send
-    res.status(200).send("Sample API for SecureX.")
-})
-
-app.get('/test', (req, res) => {
     hits += 1
-    res.send(`number of hits = ${hits}`)
+    res.status(200).send(`Sample API for SecureX. Number of hits = ${hits}`)
 })
 
 
