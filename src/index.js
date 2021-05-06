@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
     res.status(200).send(`Sample API for SecureX. Number of hits = ${hits}`)
 })
 
-app.get('/status', (req, res) => {
+app.get('/hits', (req, res) => {
     res.send(`current hits = ${hits}`)
 })
 
