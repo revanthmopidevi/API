@@ -1,7 +1,7 @@
 # SampleAPI
 
-Test third-party integration with this API.
-*/* 
+Test third-party integration with this API. /n
+/ 
   increment hit count by 1. 
   Response: code 200 & number of hits.
 
