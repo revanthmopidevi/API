@@ -2,7 +2,7 @@
 
 Test third-party applications' integration with this API.
 ## Routes
-**/ **
+**/**
   increment hit count by 1. 
   Response: code 200 & number of hits.
 
