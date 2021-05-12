@@ -4,7 +4,8 @@
   "description": "Test third-party applications' integration with this API.\r ## Routes\r **/**   ==> increment hit count by 1. Response: code 200 & number of hits.",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "webex": "^1.119.6"
   },
   "scripts": {
     "start": "node src/index.js"
