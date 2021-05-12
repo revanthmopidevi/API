@@ -1,7 +1,7 @@
 {
   "name": "sampleapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Test third-party applications' integration with this API.\r ## Routes\r **/**   ==> increment hit count by 1. Response: code 200 & number of hits.",
   "main": "index.js",
   "dependencies": {
     "express": "^4.17.1"
@@ -10,5 +10,13 @@
     "start": "node src/index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revanthmopidevi/API.git"
+  },
+  "bugs": {
+    "url": "https://github.com/revanthmopidevi/API/issues"
+  },
+  "homepage": "https://github.com/revanthmopidevi/API#readme"
 }
