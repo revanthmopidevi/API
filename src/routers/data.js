@@ -21,4 +21,8 @@ router.get('/data', (req, res)=> {
     res.status(200).send(data)
 })
 
+router.post('/alert', (req, res) => {
+
+})
+
 module.exports = router
