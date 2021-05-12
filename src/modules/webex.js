@@ -6,10 +6,15 @@ const webex = Webex.init({
   }
 })
 
-webex.messages.create({
-  text: "API is runnning successfully.",
-  toPersonEmail: "revanthmopidevi@gmail.com"
-})
-.catch((e) => {
-  console.log(e)
-})
+const sendMessage = async (text, toPersonEmail) => {
+  try {
+    webex.messages.create({
+      text: text,
+      toPersonEmail: toPersonEmail
+    })
+  } catch(e) {
+    console.log(e)
+  }
+}
+
+module.exports = sendMessage

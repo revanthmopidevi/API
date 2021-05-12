@@ -1,6 +1,7 @@
 const express = require('express')
+const message = require('../modules/webex')
 
-const router = express.Router()
+const router = new express.Router()
 
 let data = [
     {"month":"January","revenue":2025},
@@ -21,8 +22,13 @@ router.get('/data', (req, res)=> {
     res.status(200).send(data)
 })
 
-router.post('/alert', (req, res) => {
-
+router.post('/alert', async (req, res) => {
+    try {
+        await message(req.body.text, req.body.toPersonEmail)
+        res.status(200).send()
+    } catch (e) {
+        console.log(e)
+    }
 })
 
 module.exports = router
