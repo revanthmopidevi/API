@@ -27,7 +27,9 @@ router.post('/alert', async (req, res) => {
         await message(req.body.text, req.body.toPersonEmail)
         res.status(200).send()
     } catch (e) {
-        console.log(e)
+        res.status(500).send({
+            "error": `Message Not Delivered: ${e}`
+        })
     }
 })
 
