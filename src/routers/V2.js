@@ -6,7 +6,7 @@ const router = new express.Router()
 // POST alert
 router.post('/alert', async (req, res) => {
     const toPersonEmail = "revanthmopidevi@gmail.com"
-    const alerts = request.body.Alerts
+    const alerts = req.body.Alerts
     // Alert Status, End Date, Start Date
     try {
         await sendMessage(alerts, toPersonEmail)
