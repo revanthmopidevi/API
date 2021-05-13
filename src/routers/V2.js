@@ -12,7 +12,7 @@ router.post('/alert', async (req, res) => {
         await sendMessage(req.body.text, req.body.toPersonEmail)
         res.status(200).send({
             "text": req.body.text,
-            "email": req.body.toPersonEmail
+            "toPersonEmail": req.body.toPersonEmail
         })
     } catch(e) {
         res.status(500).send(e)
