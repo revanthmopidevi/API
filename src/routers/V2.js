@@ -5,14 +5,14 @@ const router = new express.Router()
 
 // POST alert
 router.post('/alert', async (req, res) => {
+    const toPersonEmail = "revanthmopidevi@gmail.com"
+    const Alerts = request.body.Alerts
+    // Alert Status, End Date, Start Date
     try {
-        if (!req.body.text || !req.body.toPersonEmail) {
-            return res.status(400).send("Message Text or Recipient Email Missing.")
-        }
-        await sendMessage(req.body.text, req.body.toPersonEmail)
+        await sendMessage(Alerts, toPersonEmail)
         res.status(200).send({
-            "text": req.body.text,
-            "toPersonEmail": req.body.toPersonEmail
+            "text": req.body.Alerts,
+            "email": toPersonEmail
         })
     } catch(e) {
         res.status(500).send(e)
