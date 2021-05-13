@@ -8,12 +8,12 @@ const webex = Webex.init({
 
 const sendMessage = async (text, toPersonEmail) => {
   try {
-    webex.messages.create({
+    await webex.messages.create({
       text: text,
       toPersonEmail: toPersonEmail
     })
   } catch(e) {
-    console.log(e)
+    throw new Error(e)
   }
 }
 
