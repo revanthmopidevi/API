@@ -1,5 +1,5 @@
 const express = require('express')
-const message = require('../modules/webex')
+const sendMessage = require('../modules/webex')
 
 const router = new express.Router()
 
@@ -24,7 +24,7 @@ router.get('/data', (req, res)=> {
 
 router.post('/alert', async (req, res) => {
     try {
-        await message(req.body.text, req.body.toPersonEmail)
+        await sendMessage(req.body.text, req.body.toPersonEmail)
         res.status(200).send()
     } catch (e) {
         res.status(500).send({
