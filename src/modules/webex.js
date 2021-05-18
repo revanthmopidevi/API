@@ -6,11 +6,12 @@ const webex = Webex.init({
   }
 })
 
-const sendMessage = async (text, toPersonEmail) => {
+const sendMessage = async (text) => {
   try {
     await webex.messages.create({
       text: text,
-      toPersonEmail: toPersonEmail
+      roomId: "Y2lzY29zcGFyazovL3VzL1JPT00vZDRjZjVkOTAtYjZjZS0xMWViLWE0ODYtZDVmMDdlMGFiMWZh",
+      // toPersonEmail: toPersonEmail
     })
   } catch(e) {
     throw new Error(e)
