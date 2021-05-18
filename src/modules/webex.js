@@ -10,8 +10,7 @@ const sendMessage = async (text) => {
   try {
     await webex.messages.create({
       text: text,
-      roomId: "Y2lzY29zcGFyazovL3VzL1JPT00vZDRjZjVkOTAtYjZjZS0xMWViLWE0ODYtZDVmMDdlMGFiMWZh",
-      // toPersonEmail: toPersonEmail
+      roomId: "Y2lzY29zcGFyazovL3VzL1JPT00vZDRjZjVkOTAtYjZjZS0xMWViLWE0ODYtZDVmMDdlMGFiMWZh"
     })
   } catch(e) {
     throw new Error(e)
